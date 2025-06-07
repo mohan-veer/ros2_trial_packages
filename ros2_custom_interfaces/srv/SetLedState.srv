@@ -1,0 +1,4 @@
+int64 set_led_panel_num
+bool panel_state
+---
+bool result

@@ -22,7 +22,9 @@ setup(
         'console_scripts': [
             "add_ints_server = ros2_services.add_two_ints_server:main",
             "add_ints_client_no_oop = ros2_services.add_two_ints_client_no_oop:main",
-            "add_ints_client_oop = ros2_services.add_two_ints_client:main"
+            "add_ints_client_oop = ros2_services.add_two_ints_client:main",
+            "battery = ros2_services.battery_node:main",
+            "panel = ros2_services.led_panel_node:main"
         ],
     },
 )
