@@ -15,6 +15,8 @@ find_package(rosidl_default_generators REQUIRED)
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/HardwareStatus.msg"
   "msg/LedPanelState.msg"
+  "msg/NextLocation.msg"
+  "msg/ReachedTarget.msg"
   "srv/RectangleAreaCalculation.srv"
   "srv/SetLedState.srv"
  )

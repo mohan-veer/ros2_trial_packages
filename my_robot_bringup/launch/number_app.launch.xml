@@ -1,0 +1,13 @@
+<launch>
+    <node pkg="ros2_pub_sub" exec="number_publisher" name="my_number_pub" namespace="/learn">
+        <remap from="number" to="my_number"/>
+        <!-- 
+        <param name="number" value="10"/>
+        <param name="timer_period" value="10" />
+        -->
+        <param from="$(find-pkg-share my_robot_bringup)/config/number_app.yaml" />
+    </node>    
+    <node pkg="ros2_pub_sub" exec="number_subscriber" name="my_number_sub">
+        <remap from="/number" to="/my_number"/>
+    </node>
+</launch>

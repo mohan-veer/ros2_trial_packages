@@ -1,0 +1,4 @@
+my_number_pub:
+  ros__parameters:
+    number: 10
+    timer_period: 3.0s

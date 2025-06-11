@@ -8,14 +8,15 @@ class RobotNewsStationNode(Node):
     def __init__(self):
         super().__init__("robot_news_station")
         # creating a publisher
-        self.robot_name = "I160P"
+        self.declare_parameter("robot_name", "M144")
         self.publisher_ = self.create_publisher(String, "robot_news",  10)
         self.timer_ = self.create_timer(1, self.publish_news)
         self.get_logger().info("Robot statement after timer")
         
     def publish_news(self):
         msg = String()
-        msg.data = "Hello I am "+self.robot_name+" sending the today temperature - 10C"
+        self.robot_name_ = self.get_parameter("robot_name").value
+        msg.data = "Hello I am "+self.robot_name_+" sending the today temperature - 10C"
         self.publisher_.publish(msg)
         
         
